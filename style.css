@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.game-area{
+    height: 400px;
+    width: 800px;
+    margin: 50px auto;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+
+#block1 , #block2 {
+    width: 300px;
+    height: 200px;
+    position: relative;
+}
+
+#block1{
+    background-color: aqua;
+    top: 150px;
+    right: -800px;
+}
+
+#block2{
+    background-color: blueviolet;
+    top: -50px;
+    right: -800px;
+}
+
+.runningBlocks{
+    animation: runBlocks 3s infinite linear;
+}
+
+@keyframes runBlocks {
+    0%{
+        right: -800px;
+    }
+    100%{
+        right: 300px;
+    }
+}
+
+/*Block which will jump*/
+
+#jump-block{
+    width: 50px;
+    height: 50px;
+    background-color: tomato;
+    position: relative;
+    top: 150px;
+    left: 200px;
+}
+
+.jump-block-animation{
+    animation: jumpBlock 0.9s linear infinite;
+}
+
+@keyframes jumpBlock {
+    0%{
+        top: 150px;
+    }
+    30%{
+        top: 80px;
+    }
+    70%{
+        top: 80px;
+    }
+    100%{
+        top: 150px;
+    }
+}

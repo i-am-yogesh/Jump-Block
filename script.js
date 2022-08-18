@@ -6,6 +6,8 @@ const gameStart = new Audio ('media/game-start.wav');
 const jumpSFX = new Audio ('media/jump.mp3');
 const fallSFX = new Audio ('media/lose.wav')
 
+gameStart.play();
+
 setTimeout(() => {
     document.getElementById('block2').classList.add("runningBlocks");
     setInterval(() => {
@@ -49,6 +51,9 @@ setTimeout(() => {
             fallSFX.play();
             location.reload();
             alert("Game Over \n Your score is  : " +score);
+            if(score > highScore){
+                highScore = score;
+            }
             score = 0;
         }
     }, 50)
